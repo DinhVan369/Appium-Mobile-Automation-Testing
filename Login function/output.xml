@@ -1,0 +1,2237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.0 on win32)" generated="2024-05-18T00:36:05.176198" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="C:\TailieuhctapPM\Kiem thu\Thuc hanh\Final\ck\Login function\login.robot">
+<kw name="Open app" owner="resources" type="SETUP">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${APP_URL}</arg>
+<arg>platformName=android</arg>
+<arg>platformVersion=14</arg>
+<arg>deviceName=emulator-5554</arg>
+<arg>appPackage=com.example.vamsi.login</arg>
+<arg>appActivity=com.example.vamsi.login.MainActivity</arg>
+<arg>automationName=UiAutomator2</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-05-18T00:36:05.418270" elapsed="6.284981"/>
+</kw>
+<status status="PASS" start="2024-05-18T00:36:05.418270" elapsed="6.284981"/>
+</kw>
+<test id="s1-t1" name="Login with valid username and password" line="11">
+<kw name="Go to register" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:12.606900" level="INFO">criteria is com.example.vamsi.login:id/tvRegister</msg>
+<arg>${REGISTER}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:36:11.704245" elapsed="0.902655"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:12.607902" level="INFO">Clicking element 'com.example.vamsi.login:id/tvRegister'.</msg>
+<msg time="2024-05-18T00:36:12.706966" level="INFO">criteria is com.example.vamsi.login:id/tvRegister</msg>
+<arg>${REGISTER}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:36:12.606900" elapsed="0.100066"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-18T00:36:14.707041" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-18T00:36:12.706966" elapsed="2.000075"/>
+</kw>
+<status status="PASS" start="2024-05-18T00:36:11.704245" elapsed="3.002796"/>
+</kw>
+<kw name="Register valid account" owner="resources">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-18T00:36:16.708000" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-18T00:36:14.707850" elapsed="2.000150"/>
+</kw>
+<kw name="Fill in info to register" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:16.754692" level="INFO">criteria is com.example.vamsi.login:id/etRegName</msg>
+<arg>${REGISTER_NAME}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:36:16.708000" elapsed="0.046692"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:16.755687" level="INFO">Typing text 'Truong Dinh Van' into text field 'com.example.vamsi.login:id/etRegName'</msg>
+<msg time="2024-05-18T00:36:17.330030" level="INFO">criteria is com.example.vamsi.login:id/etRegName</msg>
+<arg>${REGISTER_NAME}</arg>
+<arg>${name}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:36:16.754692" elapsed="0.575338"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:17.332013" level="INFO">Typing text '0171728446' into text field 'com.example.vamsi.login:id/etRegPhone'</msg>
+<msg time="2024-05-18T00:36:18.407837" level="INFO">criteria is com.example.vamsi.login:id/etRegPhone</msg>
+<arg>${REGISTER_PHONE}</arg>
+<arg>${phone}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:36:17.330030" elapsed="1.077807"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:18.408834" level="INFO">Typing text 'Dinhvan@gmail.com' into text field 'com.example.vamsi.login:id/etRegGmail'</msg>
+<msg time="2024-05-18T00:36:19.444491" level="INFO">criteria is com.example.vamsi.login:id/etRegGmail</msg>
+<arg>${REGISTER_GMAIL}</arg>
+<arg>${email}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:36:18.407837" elapsed="1.036654"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:19.446489" level="INFO">Typing text 'Van123' into text field 'com.example.vamsi.login:id/etRegPassword'</msg>
+<msg time="2024-05-18T00:36:20.469566" level="INFO">criteria is com.example.vamsi.login:id/etRegPassword</msg>
+<arg>${REGISTER_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:36:19.445488" elapsed="1.024078"/>
+</kw>
+<arg>${USER1}[name]</arg>
+<arg>${USER1}[phone]</arg>
+<arg>${USER1}[email]</arg>
+<arg>${USER1}[password]</arg>
+<status status="PASS" start="2024-05-18T00:36:16.708000" elapsed="3.761566"/>
+</kw>
+<status status="PASS" start="2024-05-18T00:36:14.707041" elapsed="5.762525"/>
+</kw>
+<kw name="Submit to register" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:21.007680" level="INFO">criteria is com.example.vamsi.login:id/btnRegLogin</msg>
+<arg>${REGISTER_BUTTON}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:36:20.470079" elapsed="0.537601"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:21.008677" level="INFO">Clicking element 'com.example.vamsi.login:id/btnRegLogin'.</msg>
+<msg time="2024-05-18T00:36:21.098796" level="INFO">criteria is com.example.vamsi.login:id/btnRegLogin</msg>
+<arg>${REGISTER_BUTTON}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:36:21.007680" elapsed="0.091116"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-18T00:36:23.099345" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-18T00:36:21.098796" elapsed="2.000549"/>
+</kw>
+<status status="PASS" start="2024-05-18T00:36:20.470079" elapsed="2.629266"/>
+</kw>
+<kw name="Go to login at register" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:23.150270" level="INFO">criteria is com.example.vamsi.login:id/btnGotoLogin</msg>
+<arg>${REGISTER_LOGIN}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:36:23.099345" elapsed="0.050925"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:23.151396" level="INFO">Clicking element 'com.example.vamsi.login:id/btnGotoLogin'.</msg>
+<msg time="2024-05-18T00:36:23.230840" level="INFO">criteria is com.example.vamsi.login:id/btnGotoLogin</msg>
+<arg>${REGISTER_LOGIN}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:36:23.150270" elapsed="0.080570"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-18T00:36:25.232446" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-18T00:36:23.231837" elapsed="2.000609"/>
+</kw>
+<status status="PASS" start="2024-05-18T00:36:23.099345" elapsed="2.133101"/>
+</kw>
+<kw name="Verify Login page" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:25.886864" level="INFO">xpath criteria: //android.widget.TextView[@text="Login"]</msg>
+<arg>//android.widget.TextView[@text="Login"]</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:36:25.233383" elapsed="0.653481"/>
+</kw>
+<kw name="Page Should Contain Element" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:25.944804" level="INFO">Current page contains element '//android.widget.TextView[@text="Login"]'.</msg>
+<msg time="2024-05-18T00:36:25.944804" level="INFO">xpath criteria: //android.widget.TextView[@text="Login"]</msg>
+<arg>//android.widget.TextView[@text="Login"]</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<status status="PASS" start="2024-05-18T00:36:25.886864" elapsed="0.057940"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:25.945800" level="INFO">Verifying element '//android.widget.TextView[@text="Login"]' contains exactly text 'Login'.</msg>
+<msg time="2024-05-18T00:36:26.017996" level="INFO">xpath criteria: //android.widget.TextView[@text="Login"]</msg>
+<arg>//android.widget.TextView[@text="Login"]</arg>
+<arg>Login</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-05-18T00:36:25.944804" elapsed="0.073192"/>
+</kw>
+<kw name="Page Should Contain Element" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:26.046421" level="INFO">Current page contains element 'com.example.vamsi.login:id/etLogGmail'.</msg>
+<msg time="2024-05-18T00:36:26.046421" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<status status="PASS" start="2024-05-18T00:36:26.017996" elapsed="0.028425"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:26.047418" level="INFO">Verifying element 'com.example.vamsi.login:id/etLogGmail' contains exactly text 'Email'.</msg>
+<msg time="2024-05-18T00:36:26.087455" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<arg>Email</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-05-18T00:36:26.046421" elapsed="0.041034"/>
+</kw>
+<kw name="Page Should Contain Element" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:26.116738" level="INFO">Current page contains element 'com.example.vamsi.login:id/etLoginPassword'.</msg>
+<msg time="2024-05-18T00:36:26.116738" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<status status="PASS" start="2024-05-18T00:36:26.087455" elapsed="0.029283"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:26.117743" level="INFO">Verifying element 'com.example.vamsi.login:id/etLoginPassword' contains exactly text 'Password'.</msg>
+<msg time="2024-05-18T00:36:26.160151" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>Password</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-05-18T00:36:26.116738" elapsed="0.043413"/>
+</kw>
+<kw name="Page Should Contain Element" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:26.189750" level="INFO">Current page contains element 'com.example.vamsi.login:id/btnLogin'.</msg>
+<msg time="2024-05-18T00:36:26.189750" level="INFO">criteria is com.example.vamsi.login:id/btnLogin</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<status status="PASS" start="2024-05-18T00:36:26.160151" elapsed="0.029599"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:26.190746" level="INFO">Verifying element 'com.example.vamsi.login:id/btnLogin' contains exactly text 'Login'.</msg>
+<msg time="2024-05-18T00:36:26.233757" level="INFO">criteria is com.example.vamsi.login:id/btnLogin</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<arg>Login</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-05-18T00:36:26.189750" elapsed="0.044007"/>
+</kw>
+<kw name="Page Should Contain Element" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:26.261190" level="INFO">Current page contains element 'com.example.vamsi.login:id/tvRegister'.</msg>
+<msg time="2024-05-18T00:36:26.261190" level="INFO">criteria is com.example.vamsi.login:id/tvRegister</msg>
+<arg>${REGISTER_LINK}</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<status status="PASS" start="2024-05-18T00:36:26.233757" elapsed="0.028429"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:26.263183" level="INFO">Verifying element 'com.example.vamsi.login:id/tvRegister' contains exactly text 'New User? Register'.</msg>
+<msg time="2024-05-18T00:36:26.302265" level="INFO">criteria is com.example.vamsi.login:id/tvRegister</msg>
+<arg>${REGISTER_LINK}</arg>
+<arg>New User? Register</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-05-18T00:36:26.262186" elapsed="0.040079"/>
+</kw>
+<status status="PASS" start="2024-05-18T00:36:25.232446" elapsed="1.069819"/>
+</kw>
+<kw name="Fill in info to login" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:26.342809" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:36:26.303114" elapsed="0.039695"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:26.383908" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:36:26.342809" elapsed="0.041099"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:26.384898" level="INFO">Typing text 'Dinhvan@gmail.com' into text field 'com.example.vamsi.login:id/etLogGmail'</msg>
+<msg time="2024-05-18T00:36:26.940793" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<arg>${email}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:36:26.383908" elapsed="0.556885"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:26.941790" level="INFO">Typing text 'Van123' into text field 'com.example.vamsi.login:id/etLoginPassword'</msg>
+<msg time="2024-05-18T00:36:27.957793" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:36:26.940793" elapsed="1.017000"/>
+</kw>
+<arg>${USER1}[email]</arg>
+<arg>${USER1}[password]</arg>
+<status status="PASS" start="2024-05-18T00:36:26.302265" elapsed="1.655528"/>
+</kw>
+<kw name="Check info at field to login" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:28.461846" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:36:27.958864" elapsed="0.502982"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:28.501324" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:36:28.461846" elapsed="0.039478"/>
+</kw>
+<kw name="Element Attribute Should Match" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:28.542255" level="INFO">Element 'com.example.vamsi.login:id/etLoginPassword' attribute 'password' is 'true' </msg>
+<msg time="2024-05-18T00:36:28.542255" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>password</arg>
+<arg>true</arg>
+<doc>Verify that an attribute of an element matches the expected criteria.</doc>
+<status status="PASS" start="2024-05-18T00:36:28.501324" elapsed="0.040931"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:28.544244" level="INFO">Verifying element 'com.example.vamsi.login:id/etLogGmail' contains exactly text 'Dinhvan@gmail.com'.</msg>
+<msg time="2024-05-18T00:36:28.586676" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<arg>${email}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-05-18T00:36:28.543250" elapsed="0.043426"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:28.588670" level="INFO">Verifying element 'com.example.vamsi.login:id/etLoginPassword' contains exactly text '••••••'.</msg>
+<msg time="2024-05-18T00:36:28.628646" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-05-18T00:36:28.587673" elapsed="0.040973"/>
+</kw>
+<arg>${USER1}[email]</arg>
+<arg>••••••</arg>
+<status status="PASS" start="2024-05-18T00:36:27.957793" elapsed="0.670853"/>
+</kw>
+<kw name="Submit to login" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:28.668678" level="INFO">criteria is com.example.vamsi.login:id/btnLogin</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:36:28.629647" elapsed="0.039031"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:28.669583" level="INFO">Clicking element 'com.example.vamsi.login:id/btnLogin'.</msg>
+<msg time="2024-05-18T00:36:28.751646" level="INFO">criteria is com.example.vamsi.login:id/btnLogin</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:36:28.668678" elapsed="0.082968"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-18T00:36:30.752050" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-18T00:36:28.751646" elapsed="2.000404"/>
+</kw>
+<status status="PASS" start="2024-05-18T00:36:28.628646" elapsed="2.123404"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>Login sucess</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2024-05-18T00:36:30.752050" elapsed="0.030970"/>
+</kw>
+<kw name="Page Should Contain Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:30.813475" level="INFO">Current page contains text 'Login sucess'.</msg>
+<arg>Login sucess</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<status status="PASS" start="2024-05-18T00:36:30.784014" elapsed="0.030458"/>
+</kw>
+<kw name="Verify login complete page" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:30.873999" level="INFO">xpath criteria: //android.widget.TextView[@text="Login"]</msg>
+<arg>//android.widget.TextView[@text="Login"]</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:36:30.814472" elapsed="0.059527"/>
+</kw>
+<kw name="Page Should Contain Element" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:30.922647" level="INFO">Current page contains element '//android.widget.TextView[@text="Login"]'.</msg>
+<msg time="2024-05-18T00:36:30.922647" level="INFO">xpath criteria: //android.widget.TextView[@text="Login"]</msg>
+<arg>//android.widget.TextView[@text="Login"]</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<status status="PASS" start="2024-05-18T00:36:30.873999" elapsed="0.048648"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:30.923644" level="INFO">Verifying element '//android.widget.TextView[@text="Login"]' contains exactly text 'Login'.</msg>
+<msg time="2024-05-18T00:36:30.981621" level="INFO">xpath criteria: //android.widget.TextView[@text="Login"]</msg>
+<arg>//android.widget.TextView[@text="Login"]</arg>
+<arg>Login</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-05-18T00:36:30.922647" elapsed="0.058974"/>
+</kw>
+<kw name="Page Should Contain Element" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:31.030451" level="INFO">Current page contains element '//android.widget.TextView[@text="You are now logged in"]'.</msg>
+<msg time="2024-05-18T00:36:31.030451" level="INFO">xpath criteria: //android.widget.TextView[@text="You are now logged in"]</msg>
+<arg>//android.widget.TextView[@text="You are now logged in"]</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<status status="PASS" start="2024-05-18T00:36:30.981621" elapsed="0.048830"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:31.031448" level="INFO">Verifying element '//android.widget.TextView[@text="You are now logged in"]' contains exactly text 'You are now logged in'.</msg>
+<msg time="2024-05-18T00:36:31.090892" level="INFO">xpath criteria: //android.widget.TextView[@text="You are now logged in"]</msg>
+<arg>//android.widget.TextView[@text="You are now logged in"]</arg>
+<arg>You are now logged in</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-05-18T00:36:31.030451" elapsed="0.061437"/>
+</kw>
+<status status="PASS" start="2024-05-18T00:36:30.814472" elapsed="0.277416"/>
+</kw>
+<kw name="Go Back" owner="AppiumLibrary">
+<doc>Goes one step backward in the browser history.</doc>
+<status status="PASS" start="2024-05-18T00:36:31.091888" elapsed="0.765213"/>
+</kw>
+<kw name="Clear login input" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:31.898809" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:36:31.858097" elapsed="0.040712"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:31.940008" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:36:31.899806" elapsed="0.040202"/>
+</kw>
+<kw name="Clear Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:31.941005" level="INFO">Clear text field 'com.example.vamsi.login:id/etLogGmail'</msg>
+<msg time="2024-05-18T00:36:31.982035" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<doc>Clears the text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:36:31.940008" elapsed="0.042027"/>
+</kw>
+<kw name="Clear Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:31.983015" level="INFO">Clear text field 'com.example.vamsi.login:id/etLoginPassword'</msg>
+<msg time="2024-05-18T00:36:32.516977" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<doc>Clears the text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:36:31.982035" elapsed="0.534942"/>
+</kw>
+<status status="PASS" start="2024-05-18T00:36:31.857101" elapsed="0.659876"/>
+</kw>
+<status status="PASS" start="2024-05-18T00:36:11.703251" elapsed="20.814737"/>
+</test>
+<test id="s1-t2" name="Login with not filled anything" line="32">
+<kw name="Check info at field to login" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:33.050156" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:36:32.518972" elapsed="0.531184"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:33.089140" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:36:33.050156" elapsed="0.038984"/>
+</kw>
+<kw name="Element Attribute Should Match" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:33.126043" level="INFO">Element 'com.example.vamsi.login:id/etLoginPassword' attribute 'password' is 'true' </msg>
+<msg time="2024-05-18T00:36:33.126043" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>password</arg>
+<arg>true</arg>
+<doc>Verify that an attribute of an element matches the expected criteria.</doc>
+<status status="PASS" start="2024-05-18T00:36:33.089140" elapsed="0.036903"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:33.128065" level="INFO">Verifying element 'com.example.vamsi.login:id/etLogGmail' contains exactly text 'Email'.</msg>
+<msg time="2024-05-18T00:36:33.166542" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<arg>${email}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-05-18T00:36:33.126043" elapsed="0.040499"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:33.167538" level="INFO">Verifying element 'com.example.vamsi.login:id/etLoginPassword' contains exactly text 'Password'.</msg>
+<msg time="2024-05-18T00:36:33.205009" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-05-18T00:36:33.166542" elapsed="0.038467"/>
+</kw>
+<arg>Email</arg>
+<arg>Password</arg>
+<status status="PASS" start="2024-05-18T00:36:32.517988" elapsed="0.687021"/>
+</kw>
+<kw name="Submit to login" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:33.243987" level="INFO">criteria is com.example.vamsi.login:id/btnLogin</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:36:33.206001" elapsed="0.037986"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:33.244978" level="INFO">Clicking element 'com.example.vamsi.login:id/btnLogin'.</msg>
+<msg time="2024-05-18T00:36:33.810566" level="INFO">criteria is com.example.vamsi.login:id/btnLogin</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:36:33.243987" elapsed="0.567425"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-18T00:36:35.812147" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-18T00:36:33.811412" elapsed="2.000735"/>
+</kw>
+<status status="PASS" start="2024-05-18T00:36:33.206001" elapsed="2.606146"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>${LOGIN_INPUT_MESSAGE}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2024-05-18T00:36:35.812147" elapsed="0.044916"/>
+</kw>
+<kw name="Page Should Contain Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:35.901686" level="INFO">Current page contains text 'Enter your Email and Password to login'.</msg>
+<arg>${LOGIN_INPUT_MESSAGE}</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<status status="PASS" start="2024-05-18T00:36:35.858060" elapsed="0.043626"/>
+</kw>
+<status status="PASS" start="2024-05-18T00:36:32.517988" elapsed="3.383698"/>
+</test>
+<test id="s1-t3" name="Login with not filled password" line="40">
+<kw name="Fill in info to login" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:35.948138" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:36:35.902682" elapsed="0.045456"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:35.996750" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:36:35.948138" elapsed="0.048612"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:35.997747" level="INFO">Typing text 'Dinhvan@gmail.com' into text field 'com.example.vamsi.login:id/etLogGmail'</msg>
+<msg time="2024-05-18T00:36:36.550524" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<arg>${email}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:36:35.996750" elapsed="0.553774"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:36.551396" level="INFO">Typing text '' into text field 'com.example.vamsi.login:id/etLoginPassword'</msg>
+<msg time="2024-05-18T00:36:37.592858" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:36:36.550524" elapsed="1.042334"/>
+</kw>
+<arg>${USER1}[email]</arg>
+<arg>${EMPTY}</arg>
+<status status="PASS" start="2024-05-18T00:36:35.902682" elapsed="1.691170"/>
+</kw>
+<kw name="Check info at field to login" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:38.097251" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:36:37.593852" elapsed="0.503399"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:38.134772" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:36:38.097251" elapsed="0.038518"/>
+</kw>
+<kw name="Element Attribute Should Match" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:38.175740" level="INFO">Element 'com.example.vamsi.login:id/etLoginPassword' attribute 'password' is 'true' </msg>
+<msg time="2024-05-18T00:36:38.175740" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>password</arg>
+<arg>true</arg>
+<doc>Verify that an attribute of an element matches the expected criteria.</doc>
+<status status="PASS" start="2024-05-18T00:36:38.135769" elapsed="0.039971"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:38.176736" level="INFO">Verifying element 'com.example.vamsi.login:id/etLogGmail' contains exactly text 'Dinhvan@gmail.com'.</msg>
+<msg time="2024-05-18T00:36:38.218734" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<arg>${email}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-05-18T00:36:38.175740" elapsed="0.042994"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:38.219726" level="INFO">Verifying element 'com.example.vamsi.login:id/etLoginPassword' contains exactly text 'Password'.</msg>
+<msg time="2024-05-18T00:36:38.257677" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-05-18T00:36:38.218734" elapsed="0.038943"/>
+</kw>
+<arg>${USER1}[email]</arg>
+<arg>Password</arg>
+<status status="PASS" start="2024-05-18T00:36:37.593852" elapsed="0.663825"/>
+</kw>
+<kw name="Submit to login" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:38.299645" level="INFO">criteria is com.example.vamsi.login:id/btnLogin</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:36:38.258674" elapsed="0.040971"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:38.300642" level="INFO">Clicking element 'com.example.vamsi.login:id/btnLogin'.</msg>
+<msg time="2024-05-18T00:36:38.878227" level="INFO">criteria is com.example.vamsi.login:id/btnLogin</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:36:38.299645" elapsed="0.578582"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-18T00:36:40.878463" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-18T00:36:38.878227" elapsed="2.000236"/>
+</kw>
+<status status="PASS" start="2024-05-18T00:36:38.258674" elapsed="2.619789"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>${LOGIN_INPUT_MESSAGE}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2024-05-18T00:36:40.878463" elapsed="0.046203"/>
+</kw>
+<kw name="Page Should Contain Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:40.974222" level="INFO">Current page contains text 'Enter your Email and Password to login'.</msg>
+<arg>${LOGIN_INPUT_MESSAGE}</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<status status="PASS" start="2024-05-18T00:36:40.924666" elapsed="0.050066"/>
+</kw>
+<status status="PASS" start="2024-05-18T00:36:35.901686" elapsed="5.073046"/>
+</test>
+<test id="s1-t4" name="Login with not filled email" line="49">
+<kw name="Fill in info to login" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:41.023689" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:36:40.975723" elapsed="0.047966"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:41.069107" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:36:41.023689" elapsed="0.045418"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:41.070193" level="INFO">Typing text '' into text field 'com.example.vamsi.login:id/etLogGmail'</msg>
+<msg time="2024-05-18T00:36:41.638172" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<arg>${email}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:36:41.069107" elapsed="0.569065"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:41.639169" level="INFO">Typing text 'Van123' into text field 'com.example.vamsi.login:id/etLoginPassword'</msg>
+<msg time="2024-05-18T00:36:42.678823" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:36:41.638172" elapsed="1.040651"/>
+</kw>
+<arg>${EMPTY}</arg>
+<arg>${USER1}[password]</arg>
+<status status="PASS" start="2024-05-18T00:36:40.975723" elapsed="1.703100"/>
+</kw>
+<kw name="Check info at field to login" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:43.181918" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:36:42.678823" elapsed="0.503095"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:43.222874" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:36:43.181918" elapsed="0.040956"/>
+</kw>
+<kw name="Element Attribute Should Match" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:43.264786" level="INFO">Element 'com.example.vamsi.login:id/etLoginPassword' attribute 'password' is 'true' </msg>
+<msg time="2024-05-18T00:36:43.264786" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>password</arg>
+<arg>true</arg>
+<doc>Verify that an attribute of an element matches the expected criteria.</doc>
+<status status="PASS" start="2024-05-18T00:36:43.222874" elapsed="0.041912"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:43.265782" level="INFO">Verifying element 'com.example.vamsi.login:id/etLogGmail' contains exactly text 'Email'.</msg>
+<msg time="2024-05-18T00:36:43.301807" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<arg>${email}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-05-18T00:36:43.264786" elapsed="0.037021"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:43.302800" level="INFO">Verifying element 'com.example.vamsi.login:id/etLoginPassword' contains exactly text '••••••'.</msg>
+<msg time="2024-05-18T00:36:43.340744" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-05-18T00:36:43.301807" elapsed="0.038937"/>
+</kw>
+<arg>Email</arg>
+<arg>••••••</arg>
+<status status="PASS" start="2024-05-18T00:36:42.678823" elapsed="0.661921"/>
+</kw>
+<kw name="Submit to login" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:43.376716" level="INFO">criteria is com.example.vamsi.login:id/btnLogin</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:36:43.341740" elapsed="0.034976"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:43.378711" level="INFO">Clicking element 'com.example.vamsi.login:id/btnLogin'.</msg>
+<msg time="2024-05-18T00:36:43.945293" level="INFO">criteria is com.example.vamsi.login:id/btnLogin</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:36:43.377714" elapsed="0.568577"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-18T00:36:45.947140" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-18T00:36:43.946291" elapsed="2.000849"/>
+</kw>
+<status status="PASS" start="2024-05-18T00:36:43.340744" elapsed="2.606396"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>${LOGIN_INPUT_MESSAGE}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2024-05-18T00:36:45.947659" elapsed="0.046302"/>
+</kw>
+<kw name="Page Should Contain Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:46.042947" level="INFO">Current page contains text 'Enter your Email and Password to login'.</msg>
+<arg>${LOGIN_INPUT_MESSAGE}</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<status status="PASS" start="2024-05-18T00:36:45.993961" elapsed="0.048986"/>
+</kw>
+<status status="PASS" start="2024-05-18T00:36:40.974732" elapsed="5.068215"/>
+</test>
+<test id="s1-t5" name="Login with valid email but wrong password" line="58">
+<kw name="Fill in info to login" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:46.086267" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:36:46.043942" elapsed="0.042325"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:46.124759" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:36:46.086267" elapsed="0.038492"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:46.125757" level="INFO">Typing text 'Dinhvan@gmail.com' into text field 'com.example.vamsi.login:id/etLogGmail'</msg>
+<msg time="2024-05-18T00:36:46.676698" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<arg>${email}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:36:46.124759" elapsed="0.551939"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:46.677839" level="INFO">Typing text 'dang123' into text field 'com.example.vamsi.login:id/etLoginPassword'</msg>
+<msg time="2024-05-18T00:36:47.697749" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:36:46.677205" elapsed="1.020544"/>
+</kw>
+<arg>${USER1}[email]</arg>
+<arg>${USER2}[password]</arg>
+<status status="PASS" start="2024-05-18T00:36:46.043942" elapsed="1.653807"/>
+</kw>
+<kw name="Check info at field to login" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:48.227631" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:36:47.698751" elapsed="0.529860"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:48.266538" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:36:48.228611" elapsed="0.037927"/>
+</kw>
+<kw name="Element Attribute Should Match" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:48.305980" level="INFO">Element 'com.example.vamsi.login:id/etLoginPassword' attribute 'password' is 'true' </msg>
+<msg time="2024-05-18T00:36:48.305980" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>password</arg>
+<arg>true</arg>
+<doc>Verify that an attribute of an element matches the expected criteria.</doc>
+<status status="PASS" start="2024-05-18T00:36:48.266538" elapsed="0.039442"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:48.306977" level="INFO">Verifying element 'com.example.vamsi.login:id/etLogGmail' contains exactly text 'Dinhvan@gmail.com'.</msg>
+<msg time="2024-05-18T00:36:48.344144" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<arg>${email}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-05-18T00:36:48.305980" elapsed="0.038164"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:48.346134" level="INFO">Verifying element 'com.example.vamsi.login:id/etLoginPassword' contains exactly text '•••••••'.</msg>
+<msg time="2024-05-18T00:36:48.383035" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-05-18T00:36:48.345137" elapsed="0.037898"/>
+</kw>
+<arg>${USER1}[email]</arg>
+<arg>•••••••</arg>
+<status status="PASS" start="2024-05-18T00:36:47.697749" elapsed="0.685286"/>
+</kw>
+<kw name="Submit to login" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:48.419003" level="INFO">criteria is com.example.vamsi.login:id/btnLogin</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:36:48.383035" elapsed="0.035968"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:48.420003" level="INFO">Clicking element 'com.example.vamsi.login:id/btnLogin'.</msg>
+<msg time="2024-05-18T00:36:48.993105" level="INFO">criteria is com.example.vamsi.login:id/btnLogin</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:36:48.419003" elapsed="0.575100"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-18T00:36:50.994324" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-18T00:36:48.994103" elapsed="2.000221"/>
+</kw>
+<status status="PASS" start="2024-05-18T00:36:48.383035" elapsed="2.611289"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>${LOGIN_ERROR}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2024-05-18T00:36:50.994324" elapsed="0.046459"/>
+</kw>
+<kw name="Page Should Contain Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:51.088737" level="INFO">Current page contains text 'Login error'.</msg>
+<arg>${LOGIN_ERROR}</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<status status="PASS" start="2024-05-18T00:36:51.040783" elapsed="0.047954"/>
+</kw>
+<status status="PASS" start="2024-05-18T00:36:46.043942" elapsed="5.045792"/>
+</test>
+<test id="s1-t6" name="Login with invalid email but correct password" line="67">
+<kw name="Fill in info to login" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:51.134697" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:36:51.090740" elapsed="0.043957"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:51.173962" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:36:51.134697" elapsed="0.039265"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:51.174958" level="INFO">Typing text 'quangdang@gmail.com' into text field 'com.example.vamsi.login:id/etLogGmail'</msg>
+<msg time="2024-05-18T00:36:51.728772" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<arg>${email}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:36:51.173962" elapsed="0.554810"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:51.729767" level="INFO">Typing text 'Van123' into text field 'com.example.vamsi.login:id/etLoginPassword'</msg>
+<msg time="2024-05-18T00:36:52.776975" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:36:51.728772" elapsed="1.048203"/>
+</kw>
+<arg>${USER2}[email]</arg>
+<arg>${USER1}[password]</arg>
+<status status="PASS" start="2024-05-18T00:36:51.089734" elapsed="1.688235"/>
+</kw>
+<kw name="Check info at field to login" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:53.282674" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:36:52.777969" elapsed="0.504705"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:53.323138" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:36:53.282674" elapsed="0.041456"/>
+</kw>
+<kw name="Element Attribute Should Match" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:53.361115" level="INFO">Element 'com.example.vamsi.login:id/etLoginPassword' attribute 'password' is 'true' </msg>
+<msg time="2024-05-18T00:36:53.361115" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>password</arg>
+<arg>true</arg>
+<doc>Verify that an attribute of an element matches the expected criteria.</doc>
+<status status="PASS" start="2024-05-18T00:36:53.324130" elapsed="0.036985"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:53.363108" level="INFO">Verifying element 'com.example.vamsi.login:id/etLogGmail' contains exactly text 'quangdang@gmail.com'.</msg>
+<msg time="2024-05-18T00:36:53.399590" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<arg>${email}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-05-18T00:36:53.362112" elapsed="0.038458"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:53.401571" level="INFO">Verifying element 'com.example.vamsi.login:id/etLoginPassword' contains exactly text '••••••'.</msg>
+<msg time="2024-05-18T00:36:53.442191" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-05-18T00:36:53.400570" elapsed="0.041621"/>
+</kw>
+<arg>${USER2}[email]</arg>
+<arg>••••••</arg>
+<status status="PASS" start="2024-05-18T00:36:52.777969" elapsed="0.664222"/>
+</kw>
+<kw name="Submit to login" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:53.480643" level="INFO">criteria is com.example.vamsi.login:id/btnLogin</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:36:53.443182" elapsed="0.037461"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:53.482633" level="INFO">Clicking element 'com.example.vamsi.login:id/btnLogin'.</msg>
+<msg time="2024-05-18T00:36:54.062138" level="INFO">criteria is com.example.vamsi.login:id/btnLogin</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:36:53.481636" elapsed="0.580502"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-18T00:36:56.063282" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-18T00:36:54.063132" elapsed="2.000150"/>
+</kw>
+<status status="PASS" start="2024-05-18T00:36:53.443182" elapsed="2.620100"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>${LOGIN_ERROR}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2024-05-18T00:36:56.063282" elapsed="0.046543"/>
+</kw>
+<kw name="Page Should Contain Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:56.155500" level="INFO">Current page contains text 'Login error'.</msg>
+<arg>${LOGIN_ERROR}</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<status status="PASS" start="2024-05-18T00:36:56.110823" elapsed="0.045679"/>
+</kw>
+<status status="PASS" start="2024-05-18T00:36:51.089734" elapsed="5.066768"/>
+</test>
+<test id="s1-t7" name="Login with invalid email and password" line="76">
+<kw name="Fill in info to login" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:56.202065" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:36:56.157495" elapsed="0.045491"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:56.238507" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:36:56.202986" elapsed="0.035521"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:56.239501" level="INFO">Typing text 'quangdang@gmail.com' into text field 'com.example.vamsi.login:id/etLogGmail'</msg>
+<msg time="2024-05-18T00:36:56.793712" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<arg>${email}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:36:56.238507" elapsed="0.555205"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:56.794709" level="INFO">Typing text 'dang123' into text field 'com.example.vamsi.login:id/etLoginPassword'</msg>
+<msg time="2024-05-18T00:36:57.810762" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:36:56.793712" elapsed="1.017050"/>
+</kw>
+<arg>${USER2}[email]</arg>
+<arg>${USER2}[password]</arg>
+<status status="PASS" start="2024-05-18T00:36:56.157495" elapsed="1.654262"/>
+</kw>
+<kw name="Check info at field to login" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:58.315365" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:36:57.811757" elapsed="0.503608"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:58.354839" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:36:58.315365" elapsed="0.039474"/>
+</kw>
+<kw name="Element Attribute Should Match" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:58.391758" level="INFO">Element 'com.example.vamsi.login:id/etLoginPassword' attribute 'password' is 'true' </msg>
+<msg time="2024-05-18T00:36:58.391758" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>password</arg>
+<arg>true</arg>
+<doc>Verify that an attribute of an element matches the expected criteria.</doc>
+<status status="PASS" start="2024-05-18T00:36:58.354839" elapsed="0.036919"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:58.393750" level="INFO">Verifying element 'com.example.vamsi.login:id/etLogGmail' contains exactly text 'quangdang@gmail.com'.</msg>
+<msg time="2024-05-18T00:36:58.928471" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<arg>${email}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-05-18T00:36:58.392754" elapsed="0.535717"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:58.929468" level="INFO">Verifying element 'com.example.vamsi.login:id/etLoginPassword' contains exactly text '•••••••'.</msg>
+<msg time="2024-05-18T00:36:58.969672" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-05-18T00:36:58.928471" elapsed="0.041201"/>
+</kw>
+<arg>${USER2}[email]</arg>
+<arg>•••••••</arg>
+<status status="PASS" start="2024-05-18T00:36:57.811757" elapsed="1.157915"/>
+</kw>
+<kw name="Submit to login" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:59.009578" level="INFO">criteria is com.example.vamsi.login:id/btnLogin</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:36:58.970670" elapsed="0.039897"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-18T00:36:59.011569" level="INFO">Clicking element 'com.example.vamsi.login:id/btnLogin'.</msg>
+<msg time="2024-05-18T00:36:59.581716" level="INFO">criteria is com.example.vamsi.login:id/btnLogin</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:36:59.010567" elapsed="0.571149"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-18T00:37:01.581820" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-18T00:36:59.581716" elapsed="2.000104"/>
+</kw>
+<status status="PASS" start="2024-05-18T00:36:58.970670" elapsed="2.611150"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>${LOGIN_ERROR}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2024-05-18T00:37:01.581820" elapsed="0.046536"/>
+</kw>
+<kw name="Page Should Contain Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:01.681283" level="INFO">Current page contains text 'Login error'.</msg>
+<arg>${LOGIN_ERROR}</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<status status="PASS" start="2024-05-18T00:37:01.628356" elapsed="0.052927"/>
+</kw>
+<status status="PASS" start="2024-05-18T00:36:56.156502" elapsed="5.524781"/>
+</test>
+<test id="s1-t8" name="Login with uppercase email" line="85">
+<kw name="Fill in info to login" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:01.723065" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:01.683112" elapsed="0.039953"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:01.763031" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:01.723065" elapsed="0.039966"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:01.764028" level="INFO">Typing text 'DINHVAN@GMAIL.COM' into text field 'com.example.vamsi.login:id/etLogGmail'</msg>
+<msg time="2024-05-18T00:37:02.317619" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<arg>${email}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:37:01.763031" elapsed="0.554588"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:02.318129" level="INFO">Typing text 'Van123' into text field 'com.example.vamsi.login:id/etLoginPassword'</msg>
+<msg time="2024-05-18T00:37:03.368417" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:37:02.317619" elapsed="1.050798"/>
+</kw>
+<arg>${USER1_UPPERCASE}[email]</arg>
+<arg>${USER1}[password]</arg>
+<status status="PASS" start="2024-05-18T00:37:01.682601" elapsed="1.685816"/>
+</kw>
+<kw name="Check info at field to login" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:03.901654" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:03.369415" elapsed="0.532239"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:03.942677" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:03.901654" elapsed="0.041023"/>
+</kw>
+<kw name="Element Attribute Should Match" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:03.985786" level="INFO">Element 'com.example.vamsi.login:id/etLoginPassword' attribute 'password' is 'true' </msg>
+<msg time="2024-05-18T00:37:03.985786" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>password</arg>
+<arg>true</arg>
+<doc>Verify that an attribute of an element matches the expected criteria.</doc>
+<status status="PASS" start="2024-05-18T00:37:03.942677" elapsed="0.043109"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:03.986783" level="INFO">Verifying element 'com.example.vamsi.login:id/etLogGmail' contains exactly text 'DINHVAN@GMAIL.COM'.</msg>
+<msg time="2024-05-18T00:37:04.028823" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<arg>${email}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-05-18T00:37:03.985786" elapsed="0.043037"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:04.030816" level="INFO">Verifying element 'com.example.vamsi.login:id/etLoginPassword' contains exactly text '••••••'.</msg>
+<msg time="2024-05-18T00:37:04.071897" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-05-18T00:37:04.028823" elapsed="0.043074"/>
+</kw>
+<arg>${USER1_UPPERCASE}[email]</arg>
+<arg>••••••</arg>
+<status status="PASS" start="2024-05-18T00:37:03.368417" elapsed="0.703480"/>
+</kw>
+<kw name="Submit to login" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:04.110675" level="INFO">criteria is com.example.vamsi.login:id/btnLogin</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:04.072893" elapsed="0.037782"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:04.112667" level="INFO">Clicking element 'com.example.vamsi.login:id/btnLogin'.</msg>
+<msg time="2024-05-18T00:37:04.679205" level="INFO">criteria is com.example.vamsi.login:id/btnLogin</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:37:04.110675" elapsed="0.568530"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-18T00:37:06.679924" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-18T00:37:04.679205" elapsed="2.000719"/>
+</kw>
+<status status="PASS" start="2024-05-18T00:37:04.072893" elapsed="2.607031"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>${LOGIN_ERROR}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2024-05-18T00:37:06.679924" elapsed="0.047026"/>
+</kw>
+<kw name="Page Should Contain Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:06.773524" level="INFO">Current page contains text 'Login error'.</msg>
+<arg>${LOGIN_ERROR}</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<status status="PASS" start="2024-05-18T00:37:06.726950" elapsed="0.046574"/>
+</kw>
+<status status="PASS" start="2024-05-18T00:37:01.682500" elapsed="5.091024"/>
+</test>
+<test id="s1-t9" name="Login with upercase password" line="94">
+<kw name="Fill in info to login" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:06.813046" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:06.775047" elapsed="0.037999"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:06.850051" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:06.813046" elapsed="0.037005"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:06.850562" level="INFO">Typing text 'Dinhvan@gmail.com' into text field 'com.example.vamsi.login:id/etLogGmail'</msg>
+<msg time="2024-05-18T00:37:07.401716" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<arg>${email}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:37:06.850051" elapsed="0.551665"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:07.403218" level="INFO">Typing text 'VAN123' into text field 'com.example.vamsi.login:id/etLoginPassword'</msg>
+<msg time="2024-05-18T00:37:08.448157" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:37:07.402224" elapsed="1.045933"/>
+</kw>
+<arg>${USER1}[email]</arg>
+<arg>${USER1_UPPERCASE}[password]</arg>
+<status status="PASS" start="2024-05-18T00:37:06.774537" elapsed="1.673620"/>
+</kw>
+<kw name="Check info at field to login" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:08.977753" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:08.449676" elapsed="0.528077"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:09.018019" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:08.977753" elapsed="0.040266"/>
+</kw>
+<kw name="Element Attribute Should Match" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:09.054968" level="INFO">Element 'com.example.vamsi.login:id/etLoginPassword' attribute 'password' is 'true' </msg>
+<msg time="2024-05-18T00:37:09.054968" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>password</arg>
+<arg>true</arg>
+<doc>Verify that an attribute of an element matches the expected criteria.</doc>
+<status status="PASS" start="2024-05-18T00:37:09.018019" elapsed="0.036949"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:09.055964" level="INFO">Verifying element 'com.example.vamsi.login:id/etLogGmail' contains exactly text 'Dinhvan@gmail.com'.</msg>
+<msg time="2024-05-18T00:37:09.092948" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<arg>${email}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-05-18T00:37:09.054968" elapsed="0.037980"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:09.094937" level="INFO">Verifying element 'com.example.vamsi.login:id/etLoginPassword' contains exactly text '••••••'.</msg>
+<msg time="2024-05-18T00:37:09.131880" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-05-18T00:37:09.092948" elapsed="0.038932"/>
+</kw>
+<arg>${USER1}[email]</arg>
+<arg>••••••</arg>
+<status status="PASS" start="2024-05-18T00:37:08.449150" elapsed="0.682730"/>
+</kw>
+<kw name="Submit to login" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:09.168327" level="INFO">criteria is com.example.vamsi.login:id/btnLogin</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:09.131880" elapsed="0.036447"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:09.169325" level="INFO">Clicking element 'com.example.vamsi.login:id/btnLogin'.</msg>
+<msg time="2024-05-18T00:37:09.745539" level="INFO">criteria is com.example.vamsi.login:id/btnLogin</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:37:09.168327" elapsed="0.577212"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-18T00:37:11.745992" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-18T00:37:09.745539" elapsed="2.000453"/>
+</kw>
+<status status="PASS" start="2024-05-18T00:37:09.131880" elapsed="2.614112"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>${LOGIN_ERROR}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2024-05-18T00:37:11.745992" elapsed="0.046318"/>
+</kw>
+<kw name="Page Should Contain Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:11.836065" level="INFO">Current page contains text 'Login error'.</msg>
+<arg>${LOGIN_ERROR}</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<status status="PASS" start="2024-05-18T00:37:11.792310" elapsed="0.043755"/>
+</kw>
+<status status="PASS" start="2024-05-18T00:37:06.773524" elapsed="5.063537"/>
+</test>
+<test id="s1-t10" name="Login with lowercase email" line="103">
+<kw name="Fill in info to login" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:11.878931" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:11.837061" elapsed="0.041870"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:11.917941" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:11.878931" elapsed="0.039010"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:11.918931" level="INFO">Typing text 'dinhvan@gmail.com' into text field 'com.example.vamsi.login:id/etLogGmail'</msg>
+<msg time="2024-05-18T00:37:12.468518" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<arg>${email}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:37:11.917941" elapsed="0.550577"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:12.470552" level="INFO">Typing text 'Van123' into text field 'com.example.vamsi.login:id/etLoginPassword'</msg>
+<msg time="2024-05-18T00:37:13.513784" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:37:12.468518" elapsed="1.045266"/>
+</kw>
+<arg>${USER1_LOWERCASE}[email]</arg>
+<arg>${USER1}[password]</arg>
+<status status="PASS" start="2024-05-18T00:37:11.837061" elapsed="1.676723"/>
+</kw>
+<kw name="Check info at field to login" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:14.043965" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:13.514776" elapsed="0.529189"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:14.079907" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:14.043965" elapsed="0.035942"/>
+</kw>
+<kw name="Element Attribute Should Match" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:14.117861" level="INFO">Element 'com.example.vamsi.login:id/etLoginPassword' attribute 'password' is 'true' </msg>
+<msg time="2024-05-18T00:37:14.117861" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>password</arg>
+<arg>true</arg>
+<doc>Verify that an attribute of an element matches the expected criteria.</doc>
+<status status="PASS" start="2024-05-18T00:37:14.079907" elapsed="0.037954"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:14.118841" level="INFO">Verifying element 'com.example.vamsi.login:id/etLogGmail' contains exactly text 'dinhvan@gmail.com'.</msg>
+<msg time="2024-05-18T00:37:14.155780" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<arg>${email}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-05-18T00:37:14.117861" elapsed="0.037919"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:14.156777" level="INFO">Verifying element 'com.example.vamsi.login:id/etLoginPassword' contains exactly text '••••••'.</msg>
+<msg time="2024-05-18T00:37:14.194703" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-05-18T00:37:14.155780" elapsed="0.038923"/>
+</kw>
+<arg>${USER1_LOWERCASE}[email]</arg>
+<arg>••••••</arg>
+<status status="PASS" start="2024-05-18T00:37:13.514776" elapsed="0.679927"/>
+</kw>
+<kw name="Submit to login" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:14.231695" level="INFO">criteria is com.example.vamsi.login:id/btnLogin</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:14.195695" elapsed="0.036000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:14.232691" level="INFO">Clicking element 'com.example.vamsi.login:id/btnLogin'.</msg>
+<msg time="2024-05-18T00:37:14.811750" level="INFO">criteria is com.example.vamsi.login:id/btnLogin</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:37:14.231695" elapsed="0.580055"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-18T00:37:16.812127" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-18T00:37:14.811750" elapsed="2.000377"/>
+</kw>
+<status status="PASS" start="2024-05-18T00:37:14.195695" elapsed="2.616432"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>${LOGIN_ERROR}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2024-05-18T00:37:16.812127" elapsed="0.043018"/>
+</kw>
+<kw name="Page Should Contain Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:16.901690" level="INFO">Current page contains text 'Login error'.</msg>
+<arg>${LOGIN_ERROR}</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<status status="PASS" start="2024-05-18T00:37:16.855145" elapsed="0.046545"/>
+</kw>
+<status status="PASS" start="2024-05-18T00:37:11.837061" elapsed="5.064842"/>
+</test>
+<test id="s1-t11" name="Login with lowercase password" line="112">
+<kw name="Fill in info to login" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:16.943116" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:16.902672" elapsed="0.040444"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:16.979033" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:16.943116" elapsed="0.035917"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:16.981023" level="INFO">Typing text 'Dinhvan@gmail.com' into text field 'com.example.vamsi.login:id/etLogGmail'</msg>
+<msg time="2024-05-18T00:37:17.532882" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<arg>${email}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:37:16.980027" elapsed="0.552855"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:17.533995" level="INFO">Typing text 'van123' into text field 'com.example.vamsi.login:id/etLoginPassword'</msg>
+<msg time="2024-05-18T00:37:18.576332" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:37:17.532882" elapsed="1.043450"/>
+</kw>
+<arg>${USER1}[email]</arg>
+<arg>${USER1_LOWERCASE}[password]</arg>
+<status status="PASS" start="2024-05-18T00:37:16.902672" elapsed="1.673660"/>
+</kw>
+<kw name="Check info at field to login" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:19.081642" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:18.577325" elapsed="0.504317"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:19.119965" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:19.081642" elapsed="0.038323"/>
+</kw>
+<kw name="Element Attribute Should Match" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:19.157867" level="INFO">Element 'com.example.vamsi.login:id/etLoginPassword' attribute 'password' is 'true' </msg>
+<msg time="2024-05-18T00:37:19.157867" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>password</arg>
+<arg>true</arg>
+<doc>Verify that an attribute of an element matches the expected criteria.</doc>
+<status status="PASS" start="2024-05-18T00:37:19.120957" elapsed="0.036910"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:19.158864" level="INFO">Verifying element 'com.example.vamsi.login:id/etLogGmail' contains exactly text 'Dinhvan@gmail.com'.</msg>
+<msg time="2024-05-18T00:37:19.194876" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<arg>${email}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-05-18T00:37:19.157867" elapsed="0.037009"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:19.195871" level="INFO">Verifying element 'com.example.vamsi.login:id/etLoginPassword' contains exactly text '••••••'.</msg>
+<msg time="2024-05-18T00:37:19.233079" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-05-18T00:37:19.194876" elapsed="0.038203"/>
+</kw>
+<arg>${USER1}[email]</arg>
+<arg>••••••</arg>
+<status status="PASS" start="2024-05-18T00:37:18.576332" elapsed="0.656747"/>
+</kw>
+<kw name="Submit to login" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:19.270149" level="INFO">criteria is com.example.vamsi.login:id/btnLogin</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:19.234076" elapsed="0.036073"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:19.272137" level="INFO">Clicking element 'com.example.vamsi.login:id/btnLogin'.</msg>
+<msg time="2024-05-18T00:37:19.842916" level="INFO">criteria is com.example.vamsi.login:id/btnLogin</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:37:19.271141" elapsed="0.571775"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-18T00:37:21.844091" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-18T00:37:19.842916" elapsed="2.001175"/>
+</kw>
+<status status="PASS" start="2024-05-18T00:37:19.234076" elapsed="2.610015"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>${LOGIN_ERROR}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2024-05-18T00:37:21.844091" elapsed="0.047874"/>
+</kw>
+<kw name="Page Should Contain Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:21.939696" level="INFO">Current page contains text 'Login error'.</msg>
+<arg>${LOGIN_ERROR}</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<status status="PASS" start="2024-05-18T00:37:21.892962" elapsed="0.046734"/>
+</kw>
+<status status="PASS" start="2024-05-18T00:37:16.902672" elapsed="5.037024"/>
+</test>
+<test id="s1-t12" name="Login when at Landscape" line="122">
+<kw name="Landscape" owner="AppiumLibrary">
+<doc>Set the device orientation to LANDSCAPE</doc>
+<status status="PASS" start="2024-05-18T00:37:21.940693" elapsed="0.117480"/>
+</kw>
+<kw name="Fill in info to login" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:23.346725" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:22.059170" elapsed="1.287555"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:23.384784" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:23.346725" elapsed="0.038059"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:23.385793" level="INFO">Typing text 'Dinhvan@gmail.com' into text field 'com.example.vamsi.login:id/etLogGmail'</msg>
+<msg time="2024-05-18T00:37:23.958865" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<arg>${email}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:37:23.384784" elapsed="0.574081"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:23.959861" level="INFO">Typing text 'Van123' into text field 'com.example.vamsi.login:id/etLoginPassword'</msg>
+<msg time="2024-05-18T00:37:24.977227" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:37:23.958865" elapsed="1.018362"/>
+</kw>
+<arg>${USER1}[email]</arg>
+<arg>${USER1}[password]</arg>
+<status status="PASS" start="2024-05-18T00:37:22.059170" elapsed="2.918057"/>
+</kw>
+<kw name="Check info at field to login" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:25.483829" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:24.978224" elapsed="0.505605"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:25.525256" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:25.483829" elapsed="0.041427"/>
+</kw>
+<kw name="Element Attribute Should Match" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:25.562994" level="INFO">Element 'com.example.vamsi.login:id/etLoginPassword' attribute 'password' is 'true' </msg>
+<msg time="2024-05-18T00:37:25.562994" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>password</arg>
+<arg>true</arg>
+<doc>Verify that an attribute of an element matches the expected criteria.</doc>
+<status status="PASS" start="2024-05-18T00:37:25.525256" elapsed="0.037738"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:25.563991" level="INFO">Verifying element 'com.example.vamsi.login:id/etLogGmail' contains exactly text 'Dinhvan@gmail.com'.</msg>
+<msg time="2024-05-18T00:37:25.598938" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<arg>${email}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-05-18T00:37:25.562994" elapsed="0.035944"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:25.599935" level="INFO">Verifying element 'com.example.vamsi.login:id/etLoginPassword' contains exactly text '••••••'.</msg>
+<msg time="2024-05-18T00:37:25.635395" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-05-18T00:37:25.598938" elapsed="0.036457"/>
+</kw>
+<arg>${USER1}[email]</arg>
+<arg>••••••</arg>
+<status status="PASS" start="2024-05-18T00:37:24.978224" elapsed="0.657171"/>
+</kw>
+<kw name="Submit to login" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:25.670970" level="INFO">criteria is com.example.vamsi.login:id/btnLogin</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:25.636392" elapsed="0.034578"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:25.671961" level="INFO">Clicking element 'com.example.vamsi.login:id/btnLogin'.</msg>
+<msg time="2024-05-18T00:37:25.748378" level="INFO">criteria is com.example.vamsi.login:id/btnLogin</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:37:25.670970" elapsed="0.077408"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-18T00:37:27.748660" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-18T00:37:25.748378" elapsed="2.000282"/>
+</kw>
+<status status="PASS" start="2024-05-18T00:37:25.636392" elapsed="2.112268"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>Login sucess</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2024-05-18T00:37:27.749169" elapsed="0.033617"/>
+</kw>
+<kw name="Page Should Contain Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:27.810790" level="INFO">Current page contains text 'Login sucess'.</msg>
+<arg>Login sucess</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<status status="PASS" start="2024-05-18T00:37:27.783778" elapsed="0.027012"/>
+</kw>
+<kw name="Verify login complete page at Landscape" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:27.868335" level="INFO">xpath criteria: //android.widget.TextView[@text="Login"]</msg>
+<arg>//android.widget.TextView[@text="Login"]</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:27.811791" elapsed="0.056544"/>
+</kw>
+<kw name="Page Should Contain Element" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:27.916106" level="INFO">Current page contains element '//android.widget.TextView[@text="Login"]'.</msg>
+<msg time="2024-05-18T00:37:27.916106" level="INFO">xpath criteria: //android.widget.TextView[@text="Login"]</msg>
+<arg>//android.widget.TextView[@text="Login"]</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<status status="PASS" start="2024-05-18T00:37:27.868335" elapsed="0.047771"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:27.917111" level="INFO">Verifying element '//android.widget.TextView[@text="Login"]' contains exactly text 'Login'.</msg>
+<msg time="2024-05-18T00:37:27.974363" level="INFO">xpath criteria: //android.widget.TextView[@text="Login"]</msg>
+<arg>//android.widget.TextView[@text="Login"]</arg>
+<arg>Login</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-05-18T00:37:27.916106" elapsed="0.058267"/>
+</kw>
+<kw name="Swipe" owner="AppiumLibrary">
+<arg>1000</arg>
+<arg>900</arg>
+<arg>1000</arg>
+<arg>300</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" start="2024-05-18T00:37:27.974373" elapsed="1.301762"/>
+</kw>
+<kw name="Page Should Contain Element" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:29.323938" level="INFO">Current page contains element '//android.widget.TextView[@text="You are now logged in"]'.</msg>
+<msg time="2024-05-18T00:37:29.323938" level="INFO">xpath criteria: //android.widget.TextView[@text="You are now logged in"]</msg>
+<arg>//android.widget.TextView[@text="You are now logged in"]</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<status status="PASS" start="2024-05-18T00:37:29.276135" elapsed="0.047803"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:29.324936" level="INFO">Verifying element '//android.widget.TextView[@text="You are now logged in"]' contains exactly text 'You are now logged in'.</msg>
+<msg time="2024-05-18T00:37:29.378865" level="INFO">xpath criteria: //android.widget.TextView[@text="You are now logged in"]</msg>
+<arg>//android.widget.TextView[@text="You are now logged in"]</arg>
+<arg>You are now logged in</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-05-18T00:37:29.323938" elapsed="0.054927"/>
+</kw>
+<status status="PASS" start="2024-05-18T00:37:27.810790" elapsed="1.568075"/>
+</kw>
+<kw name="Portrait" owner="AppiumLibrary">
+<doc>Set the device orientation to PORTRAIT</doc>
+<status status="PASS" start="2024-05-18T00:37:29.379856" elapsed="0.115426"/>
+</kw>
+<kw name="Go Back" owner="AppiumLibrary">
+<doc>Goes one step backward in the browser history.</doc>
+<status status="PASS" start="2024-05-18T00:37:29.495282" elapsed="1.177934"/>
+</kw>
+<kw name="Clear login input" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:30.713846" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:30.674221" elapsed="0.039625"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:30.751438" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:30.713846" elapsed="0.037592"/>
+</kw>
+<kw name="Clear Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:30.752439" level="INFO">Clear text field 'com.example.vamsi.login:id/etLogGmail'</msg>
+<msg time="2024-05-18T00:37:30.796043" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<doc>Clears the text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:37:30.751438" elapsed="0.044605"/>
+</kw>
+<kw name="Clear Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:30.797040" level="INFO">Clear text field 'com.example.vamsi.login:id/etLoginPassword'</msg>
+<msg time="2024-05-18T00:37:31.304528" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<doc>Clears the text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:37:30.796043" elapsed="0.508485"/>
+</kw>
+<status status="PASS" start="2024-05-18T00:37:30.673216" elapsed="0.631312"/>
+</kw>
+<status status="PASS" start="2024-05-18T00:37:21.940693" elapsed="9.363835"/>
+</test>
+<test id="s1-t13" name="Login when at Airplane mode" line="137">
+<kw name="Set Network Connection Status" owner="AppiumLibrary">
+<arg>1</arg>
+<doc>Sets the network connection Status.</doc>
+<status status="PASS" start="2024-05-18T00:37:31.305528" elapsed="0.073625"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-18T00:37:33.380832" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-18T00:37:31.380149" elapsed="2.000683"/>
+</kw>
+<kw name="Fill in info to login" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:33.418774" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:33.381829" elapsed="0.036945"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:33.452676" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:33.418774" elapsed="0.033902"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:33.454669" level="INFO">Typing text 'Dinhvan@gmail.com' into text field 'com.example.vamsi.login:id/etLogGmail'</msg>
+<msg time="2024-05-18T00:37:34.002381" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<arg>${email}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:37:33.452676" elapsed="0.549705"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:34.003372" level="INFO">Typing text 'Van123' into text field 'com.example.vamsi.login:id/etLoginPassword'</msg>
+<msg time="2024-05-18T00:37:35.045043" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:37:34.002381" elapsed="1.042662"/>
+</kw>
+<arg>${USER1}[email]</arg>
+<arg>${USER1}[password]</arg>
+<status status="PASS" start="2024-05-18T00:37:33.380832" elapsed="1.664211"/>
+</kw>
+<kw name="Check info at field to login" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:35.549753" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:35.046041" elapsed="0.503712"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:35.588707" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:35.549753" elapsed="0.038954"/>
+</kw>
+<kw name="Element Attribute Should Match" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:35.626747" level="INFO">Element 'com.example.vamsi.login:id/etLoginPassword' attribute 'password' is 'true' </msg>
+<msg time="2024-05-18T00:37:35.626747" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>password</arg>
+<arg>true</arg>
+<doc>Verify that an attribute of an element matches the expected criteria.</doc>
+<status status="PASS" start="2024-05-18T00:37:35.588707" elapsed="0.038040"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:35.627745" level="INFO">Verifying element 'com.example.vamsi.login:id/etLogGmail' contains exactly text 'Dinhvan@gmail.com'.</msg>
+<msg time="2024-05-18T00:37:35.673218" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<arg>${email}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-05-18T00:37:35.626747" elapsed="0.046471"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:35.674210" level="INFO">Verifying element 'com.example.vamsi.login:id/etLoginPassword' contains exactly text '••••••'.</msg>
+<msg time="2024-05-18T00:37:35.709738" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-05-18T00:37:35.673218" elapsed="0.036520"/>
+</kw>
+<arg>${USER1}[email]</arg>
+<arg>••••••</arg>
+<status status="PASS" start="2024-05-18T00:37:35.046041" elapsed="0.663697"/>
+</kw>
+<kw name="Submit to login" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:35.746869" level="INFO">criteria is com.example.vamsi.login:id/btnLogin</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:35.710687" elapsed="0.036182"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:35.747866" level="INFO">Clicking element 'com.example.vamsi.login:id/btnLogin'.</msg>
+<msg time="2024-05-18T00:37:35.831710" level="INFO">criteria is com.example.vamsi.login:id/btnLogin</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:37:35.746869" elapsed="0.084841"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-18T00:37:37.832344" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-18T00:37:35.831710" elapsed="2.000634"/>
+</kw>
+<status status="PASS" start="2024-05-18T00:37:35.709738" elapsed="2.122606"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>Login sucess</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2024-05-18T00:37:37.832887" elapsed="0.029274"/>
+</kw>
+<kw name="Page Should Contain Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:37.890609" level="INFO">Current page contains text 'Login sucess'.</msg>
+<arg>Login sucess</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<status status="PASS" start="2024-05-18T00:37:37.862161" elapsed="0.028448"/>
+</kw>
+<kw name="Verify login complete page" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:37.950376" level="INFO">xpath criteria: //android.widget.TextView[@text="Login"]</msg>
+<arg>//android.widget.TextView[@text="Login"]</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:37.891401" elapsed="0.058975"/>
+</kw>
+<kw name="Page Should Contain Element" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:37.995914" level="INFO">Current page contains element '//android.widget.TextView[@text="Login"]'.</msg>
+<msg time="2024-05-18T00:37:37.995914" level="INFO">xpath criteria: //android.widget.TextView[@text="Login"]</msg>
+<arg>//android.widget.TextView[@text="Login"]</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<status status="PASS" start="2024-05-18T00:37:37.950376" elapsed="0.045538"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:37.996911" level="INFO">Verifying element '//android.widget.TextView[@text="Login"]' contains exactly text 'Login'.</msg>
+<msg time="2024-05-18T00:37:38.058816" level="INFO">xpath criteria: //android.widget.TextView[@text="Login"]</msg>
+<arg>//android.widget.TextView[@text="Login"]</arg>
+<arg>Login</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-05-18T00:37:37.995914" elapsed="0.062902"/>
+</kw>
+<kw name="Page Should Contain Element" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:38.108186" level="INFO">Current page contains element '//android.widget.TextView[@text="You are now logged in"]'.</msg>
+<msg time="2024-05-18T00:37:38.108186" level="INFO">xpath criteria: //android.widget.TextView[@text="You are now logged in"]</msg>
+<arg>//android.widget.TextView[@text="You are now logged in"]</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<status status="PASS" start="2024-05-18T00:37:38.058816" elapsed="0.049370"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:38.109183" level="INFO">Verifying element '//android.widget.TextView[@text="You are now logged in"]' contains exactly text 'You are now logged in'.</msg>
+<msg time="2024-05-18T00:37:38.169021" level="INFO">xpath criteria: //android.widget.TextView[@text="You are now logged in"]</msg>
+<arg>//android.widget.TextView[@text="You are now logged in"]</arg>
+<arg>You are now logged in</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-05-18T00:37:38.108186" elapsed="0.060835"/>
+</kw>
+<status status="PASS" start="2024-05-18T00:37:37.891401" elapsed="0.277620"/>
+</kw>
+<kw name="Go Back" owner="AppiumLibrary">
+<doc>Goes one step backward in the browser history.</doc>
+<status status="PASS" start="2024-05-18T00:37:38.169021" elapsed="0.770697"/>
+</kw>
+<kw name="Clear login input" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:39.453665" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:38.940715" elapsed="0.512950"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:39.489506" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:39.453665" elapsed="0.035841"/>
+</kw>
+<kw name="Clear Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:39.490499" level="INFO">Clear text field 'com.example.vamsi.login:id/etLogGmail'</msg>
+<msg time="2024-05-18T00:37:39.529001" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<doc>Clears the text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:37:39.489506" elapsed="0.039495"/>
+</kw>
+<kw name="Clear Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:39.529992" level="INFO">Clear text field 'com.example.vamsi.login:id/etLoginPassword'</msg>
+<msg time="2024-05-18T00:37:40.074069" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<doc>Clears the text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:37:39.529001" elapsed="0.545068"/>
+</kw>
+<status status="PASS" start="2024-05-18T00:37:38.940715" elapsed="1.133354"/>
+</kw>
+<kw name="Set Network Connection Status" owner="AppiumLibrary">
+<arg>0</arg>
+<doc>Sets the network connection Status.</doc>
+<status status="PASS" start="2024-05-18T00:37:40.074855" elapsed="0.068184"/>
+</kw>
+<status status="PASS" start="2024-05-18T00:37:31.304528" elapsed="8.839515"/>
+</test>
+<test id="s1-t14" name="Login with SQL Injection" line="154">
+<kw name="Fill in info to login" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:40.603450" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:40.145033" elapsed="0.458417"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:40.640908" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:40.603450" elapsed="0.037458"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:40.642898" level="INFO">Typing text '' OR 1=1; --' into text field 'com.example.vamsi.login:id/etLogGmail'</msg>
+<msg time="2024-05-18T00:37:41.191345" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<arg>${email}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:37:40.640908" elapsed="0.551434"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:41.193338" level="INFO">Typing text '' OR 1=1; --' into text field 'com.example.vamsi.login:id/etLoginPassword'</msg>
+<msg time="2024-05-18T00:37:42.209476" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:37:41.192342" elapsed="1.017134"/>
+</kw>
+<arg>' OR 1=1; --</arg>
+<arg>' OR 1=1; --</arg>
+<status status="PASS" start="2024-05-18T00:37:40.144043" elapsed="2.065433"/>
+</kw>
+<kw name="Check info at field to login" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:42.713035" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:42.209476" elapsed="0.503559"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:42.750136" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:42.714685" elapsed="0.036443"/>
+</kw>
+<kw name="Element Attribute Should Match" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:42.789959" level="INFO">Element 'com.example.vamsi.login:id/etLoginPassword' attribute 'password' is 'true' </msg>
+<msg time="2024-05-18T00:37:42.789959" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>password</arg>
+<arg>true</arg>
+<doc>Verify that an attribute of an element matches the expected criteria.</doc>
+<status status="PASS" start="2024-05-18T00:37:42.751236" elapsed="0.038723"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:42.790960" level="INFO">Verifying element 'com.example.vamsi.login:id/etLogGmail' contains exactly text '' OR 1=1; --'.</msg>
+<msg time="2024-05-18T00:37:42.826152" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<arg>${email}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-05-18T00:37:42.789959" elapsed="0.036193"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:42.828150" level="INFO">Verifying element 'com.example.vamsi.login:id/etLoginPassword' contains exactly text '••••••••••••'.</msg>
+<msg time="2024-05-18T00:37:42.864927" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-05-18T00:37:42.826152" elapsed="0.038775"/>
+</kw>
+<arg>' OR 1=1; --</arg>
+<arg>••••••••••••</arg>
+<status status="PASS" start="2024-05-18T00:37:42.209476" elapsed="0.655451"/>
+</kw>
+<kw name="Submit to login" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:42.901311" level="INFO">criteria is com.example.vamsi.login:id/btnLogin</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:42.865928" elapsed="0.035383"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:42.902505" level="INFO">Clicking element 'com.example.vamsi.login:id/btnLogin'.</msg>
+<msg time="2024-05-18T00:37:43.483145" level="INFO">criteria is com.example.vamsi.login:id/btnLogin</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:37:42.901311" elapsed="0.581834"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-18T00:37:45.483662" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-18T00:37:43.483145" elapsed="2.000517"/>
+</kw>
+<status status="PASS" start="2024-05-18T00:37:42.864927" elapsed="2.618735"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>${LOGIN_ERROR}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2024-05-18T00:37:45.484252" elapsed="0.047418"/>
+</kw>
+<kw name="Page Should Contain Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:45.579851" level="INFO">Current page contains text 'Login error'.</msg>
+<arg>${LOGIN_ERROR}</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<status status="PASS" start="2024-05-18T00:37:45.532663" elapsed="0.047188"/>
+</kw>
+<status status="PASS" start="2024-05-18T00:37:40.144043" elapsed="5.435808"/>
+</test>
+<test id="s1-t15" name="Login with Cross Site Scripting" line="163">
+<kw name="Fill in info to login" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:45.622781" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:45.580847" elapsed="0.041934"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:45.660398" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:45.622781" elapsed="0.037617"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:45.661999" level="INFO">Typing text '&lt;script&gt;alert('XSS')&lt;/script&gt;' into text field 'com.example.vamsi.login:id/etLogGmail'</msg>
+<msg time="2024-05-18T00:37:46.213010" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<arg>${email}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:37:45.661395" elapsed="0.551615"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:46.214988" level="INFO">Typing text '&lt;script&gt;alert('XSS')&lt;/script&gt;' into text field 'com.example.vamsi.login:id/etLoginPassword'</msg>
+<msg time="2024-05-18T00:37:47.232692" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:37:46.213010" elapsed="1.019682"/>
+</kw>
+<arg>&lt;script&gt;alert('XSS')&lt;/script&gt;</arg>
+<arg>&lt;script&gt;alert('XSS')&lt;/script&gt;</arg>
+<status status="PASS" start="2024-05-18T00:37:45.580847" elapsed="1.651845"/>
+</kw>
+<kw name="Check info at field to login" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:47.763754" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:47.233688" elapsed="0.531062"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:47.801520" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:47.764750" elapsed="0.036770"/>
+</kw>
+<kw name="Element Attribute Should Match" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:47.838103" level="INFO">Element 'com.example.vamsi.login:id/etLoginPassword' attribute 'password' is 'true' </msg>
+<msg time="2024-05-18T00:37:47.838103" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>password</arg>
+<arg>true</arg>
+<doc>Verify that an attribute of an element matches the expected criteria.</doc>
+<status status="PASS" start="2024-05-18T00:37:47.801520" elapsed="0.037577"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:47.840094" level="INFO">Verifying element 'com.example.vamsi.login:id/etLogGmail' contains exactly text '&lt;script&gt;alert('XSS')&lt;/script&gt;'.</msg>
+<msg time="2024-05-18T00:37:47.875643" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<arg>${email}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-05-18T00:37:47.839097" elapsed="0.036546"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:47.877636" level="INFO">Verifying element 'com.example.vamsi.login:id/etLoginPassword' contains exactly text '•••••••••••••••••••••••••••••'.</msg>
+<msg time="2024-05-18T00:37:47.912690" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-05-18T00:37:47.875643" elapsed="0.037047"/>
+</kw>
+<arg>&lt;script&gt;alert('XSS')&lt;/script&gt;</arg>
+<arg>•••••••••••••••••••••••••••••</arg>
+<status status="PASS" start="2024-05-18T00:37:47.232692" elapsed="0.679998"/>
+</kw>
+<kw name="Submit to login" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:47.950154" level="INFO">criteria is com.example.vamsi.login:id/btnLogin</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:47.913686" elapsed="0.037466"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:47.952148" level="INFO">Clicking element 'com.example.vamsi.login:id/btnLogin'.</msg>
+<msg time="2024-05-18T00:37:48.527987" level="INFO">criteria is com.example.vamsi.login:id/btnLogin</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:37:47.951152" elapsed="0.576835"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-18T00:37:50.528988" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-18T00:37:48.527987" elapsed="2.001001"/>
+</kw>
+<status status="PASS" start="2024-05-18T00:37:47.912690" elapsed="2.616298"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>${LOGIN_ERROR}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2024-05-18T00:37:50.528988" elapsed="0.048313"/>
+</kw>
+<kw name="Page Should Contain Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:50.625077" level="INFO">Current page contains text 'Login error'.</msg>
+<arg>${LOGIN_ERROR}</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<status status="PASS" start="2024-05-18T00:37:50.578306" elapsed="0.046771"/>
+</kw>
+<status status="PASS" start="2024-05-18T00:37:45.580847" elapsed="5.045229"/>
+</test>
+<test id="s1-t16" name="Login with Remote Code Execution" line="172">
+<kw name="Fill in info to login" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:50.679306" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:50.627071" elapsed="0.052235"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:50.715494" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:50.679306" elapsed="0.036188"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:50.716520" level="INFO">Typing text '`ls`' into text field 'com.example.vamsi.login:id/etLogGmail'</msg>
+<msg time="2024-05-18T00:37:51.268548" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<arg>${email}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:37:50.715494" elapsed="0.553054"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:51.269545" level="INFO">Typing text '`ls`' into text field 'com.example.vamsi.login:id/etLoginPassword'</msg>
+<msg time="2024-05-18T00:37:52.313791" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:37:51.268548" elapsed="1.045243"/>
+</kw>
+<arg>`ls`</arg>
+<arg>`ls`</arg>
+<status status="PASS" start="2024-05-18T00:37:50.627071" elapsed="1.686720"/>
+</kw>
+<kw name="Check info at field to login" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:52.817665" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:52.313791" elapsed="0.503874"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:52.858103" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:52.818641" elapsed="0.039462"/>
+</kw>
+<kw name="Element Attribute Should Match" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:52.895147" level="INFO">Element 'com.example.vamsi.login:id/etLoginPassword' attribute 'password' is 'true' </msg>
+<msg time="2024-05-18T00:37:52.896148" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>password</arg>
+<arg>true</arg>
+<doc>Verify that an attribute of an element matches the expected criteria.</doc>
+<status status="PASS" start="2024-05-18T00:37:52.858103" elapsed="0.038045"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:52.897144" level="INFO">Verifying element 'com.example.vamsi.login:id/etLogGmail' contains exactly text '`ls`'.</msg>
+<msg time="2024-05-18T00:37:52.932126" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<arg>${email}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-05-18T00:37:52.896148" elapsed="0.035978"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:52.933124" level="INFO">Verifying element 'com.example.vamsi.login:id/etLoginPassword' contains exactly text '••••'.</msg>
+<msg time="2024-05-18T00:37:52.968094" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-05-18T00:37:52.932126" elapsed="0.035968"/>
+</kw>
+<arg>`ls`</arg>
+<arg>••••</arg>
+<status status="PASS" start="2024-05-18T00:37:52.313791" elapsed="0.654303"/>
+</kw>
+<kw name="Submit to login" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:53.005947" level="INFO">criteria is com.example.vamsi.login:id/btnLogin</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-18T00:37:52.968094" elapsed="0.037853"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:53.006457" level="INFO">Clicking element 'com.example.vamsi.login:id/btnLogin'.</msg>
+<msg time="2024-05-18T00:37:53.576460" level="INFO">criteria is com.example.vamsi.login:id/btnLogin</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-18T00:37:53.005947" elapsed="0.570513"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-18T00:37:55.576782" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-18T00:37:53.576460" elapsed="2.000322"/>
+</kw>
+<status status="PASS" start="2024-05-18T00:37:52.968094" elapsed="2.608688"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>${LOGIN_ERROR}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2024-05-18T00:37:55.577292" elapsed="0.045623"/>
+</kw>
+<kw name="Page Should Contain Text" owner="AppiumLibrary">
+<msg time="2024-05-18T00:37:55.673223" level="INFO">Current page contains text 'Login error'.</msg>
+<arg>${LOGIN_ERROR}</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<status status="PASS" start="2024-05-18T00:37:55.622915" elapsed="0.051314"/>
+</kw>
+<status status="PASS" start="2024-05-18T00:37:50.626076" elapsed="5.048153"/>
+</test>
+<kw name="Close Application" owner="AppiumLibrary" type="TEARDOWN">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2024-05-18T00:37:55.676217" elapsed="0.315469"/>
+</kw>
+<status status="PASS" start="2024-05-18T00:36:05.177811" elapsed="110.814871"/>
+</suite>
+<statistics>
+<total>
+<stat pass="16" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="16" fail="0" skip="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
